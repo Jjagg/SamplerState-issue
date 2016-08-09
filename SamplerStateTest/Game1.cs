@@ -125,8 +125,11 @@ namespace SamplerStateTest
 
             _spriteBatch.Begin();
 
-            _spriteBatch.DrawString(_spriteFont, _samplerStates[_samplerStateIndex].ComparisonFunction.ToString(), 
-                new Vector2(450, 250), Color.Black);
+            _spriteBatch.DrawString(_spriteFont, "Comparison Function: " + _samplerStates[_samplerStateIndex].ComparisonFunction, 
+                new Vector2(480, 100), Color.Black);
+            _spriteBatch.DrawString(_spriteFont, "Original texture:",
+                new Vector2(480, 150), Color.Black);
+            _spriteBatch.Draw(_tex, new Rectangle(480, 180, 200, 200), Color.White);
 
             _spriteBatch.End();
 
